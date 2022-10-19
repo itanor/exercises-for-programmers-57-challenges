@@ -13,8 +13,15 @@ pub fn outputs_the_input(input: &str, total: usize) {
 }
 
 pub fn read_while_input_has_more_than_zero_chars() {
-  what_is_the_input();
-  let input = input::read_input();
-  let count = count_characters(&input);
-  outputs_the_input(&input, count);
+  let mut must_read_input = true;
+
+  while must_read_input {
+    what_is_the_input();
+    let input = input::read_input();
+    let count = count_characters(&input);
+    if count > 0 {
+      outputs_the_input(&input, count);
+      must_read_input = false;
+    }
+  }
 }
