@@ -1,4 +1,4 @@
-use std::io;
+use std::io; 
 use std::collections::HashMap;
 
 pub fn what_is_your_name() {
@@ -22,13 +22,4 @@ pub fn say_hello_to_name(name: &str) {
 
   let formatted = greeting_by_name.replace("{}", name);
   println!("{}", formatted);
-}
-
-pub fn read_input() -> String {
-  let mut input = String::new();
-  match io::stdin().read_line(&mut input) {
-      Ok(_goes_into_imput) => {},
-      Err(_no_uptades) => {},
-  }
-  input.trim().to_string()
 }
