@@ -1,9 +1,9 @@
-use crate::input;
+use crate::io::input;
 
 pub fn what_is_the_input() { 
   println!("What is the input string? ");
 }
- 
+
 pub fn count_characters(input: &str) -> usize {
   return input.len();
 }

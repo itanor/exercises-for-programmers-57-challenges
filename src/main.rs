@@ -5,8 +5,9 @@
 //mod input;
 //use input::read_input;
 
-mod input;
+mod io;
 mod chars;
+use chars::characters::read_while_input_has_more_than_zero_chars;
 
 fn main() {
     //what_is_your_name();
@@ -17,5 +18,5 @@ fn main() {
     //let input = read_input();
     //let count = count_characters(&input);
     //outputs_the_input(&input, count);
-    chars::read_while_input_has_more_than_zero_chars();
+    read_while_input_has_more_than_zero_chars();
 }
